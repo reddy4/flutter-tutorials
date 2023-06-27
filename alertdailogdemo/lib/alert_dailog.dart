@@ -23,9 +23,9 @@ class NewAlertDailog extends StatelessWidget{
 
     showDialog(context: context, builder: (context){
 
-      return const AlertDialog(
+      return  AlertDialog(
 
-        title: Text("Alert Dailog Demo",
+        title: const Text("Alert Dailog Demo",
               style: TextStyle(
                 fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.bold,
@@ -33,7 +33,7 @@ class NewAlertDailog extends StatelessWidget{
                 color: Colors.blue
               ),
             ),
-        content: Text("Welcome to dart programming language",
+        content: const Text("Welcome to dart programming language",
           style: TextStyle(
             fontStyle: FontStyle.italic,
             fontWeight: FontWeight.bold,
@@ -44,6 +44,36 @@ class NewAlertDailog extends StatelessWidget{
         backgroundColor: Colors.grey,
         icon: Icon(Icons.favorite_border_outlined),
         iconColor: Colors.red,
+        actions: [
+          ElevatedButton(
+            child: const Text("Yes",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  fontStyle: FontStyle.normal,
+                  backgroundColor: Colors.redAccent,
+                  color: Colors.white
+              ),
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          ElevatedButton(
+            child: const Text("NO",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  fontStyle: FontStyle.normal,
+                  backgroundColor: Colors.redAccent,
+                  color: Colors.white
+              ),
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
 
       );
 
